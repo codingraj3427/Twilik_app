@@ -1,22 +1,26 @@
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body styles */
 body {
-  background-color: #292524;
-  color: #fafaf9;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
   font-family: "Sono", sans-serif;
   padding: 48px 64px;
+  min-height: 100vh;
 }
 
-/* MAIN LAYOUT */
+/* Container layout */
 .container {
   max-width: 1500px;
   margin: 0 auto;
 }
 
+/* Header styles */
 .header {
   margin-bottom: 40px;
   display: flex;
@@ -24,6 +28,7 @@ body {
   justify-content: space-between;
 }
 
+/* Main content layout */
 .main {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -36,8 +41,7 @@ body {
   }
 }
 
-/* ELEMENTS */
-
+/* Logo styles */
 .logo {
   display: flex;
   align-items: center;
@@ -49,30 +53,32 @@ body {
   height: 68px;
 }
 
+/* Heading styles */
 h1 {
-  font-size: 42px;
+  font-size: 36px;
   text-transform: uppercase;
   font-family: "Coiny", sans-serif;
   line-height: 1;
   margin-top: 6px;
 }
 
+/* Category styles */
 .category {
   margin-bottom: 16px;
 }
 
+/* Fact styles */
 .fact {
-  font-size: 20px;
-  line-height: 1.4;
-  background-color: #44403c;
-  margin-bottom: 16px;
-  padding: 16px 24px;
-  letter-spacing: -1px;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #333;
+  margin-bottom: 20px;
+  padding: 16px;
   border-radius: 16px;
-
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1200px) {
@@ -83,51 +89,58 @@ h1 {
   }
 }
 
+/* Tag styles */
 .tag {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Coiny", sans-serif;
-  padding-top: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 4px 10px;
   border-radius: 100px;
+  background-color: #3b82f6;
+  color: #fff;
 }
 
+.tag.technology {
+  background-color: #16a34a;
+}
+
+.tag.science {
+  background-color: #eab308;
+}
+
+/* Vote button styles */
 .vote-buttons {
   margin-left: auto;
   flex-shrink: 0;
-
   display: flex;
   gap: 8px;
 }
 
 .vote-buttons button {
   border: none;
-  background-color: #78716c;
-  font-size: 18px;
+  background-color: #4a90e2;
+  font-size: 16px;
   padding: 6px 12px;
   border-radius: 100px;
-  color: inherit;
-  font-family: inherit;
+  color: #fff;
+  font-family: "Coiny", sans-serif;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .vote-buttons button:hover {
-  background-color: #292524;
+  background-color: #357ccf;
+  transform: scale(1.05);
 }
 
-ul {
-  list-style: none;
-}
-
+/* Source link styles */
 .source:link,
 .source:visited {
   color: #a8a29e;
   text-decoration: none;
   margin-left: 12px;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .source:hover,
@@ -135,44 +148,47 @@ ul {
   color: #3b82f6;
 }
 
+/* Button styles */
 .btn {
   border: none;
   font-family: "Coiny", sans-serif;
   line-height: 1;
   text-transform: uppercase;
-  font-size: 17px;
-  padding: 16px 0 13px;
-  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
-  color: inherit;
+  font-size: 16px;
+  padding: 12px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
   border-radius: 100px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .btn:hover {
-  transform: scale(110%) rotate(-2deg);
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .btn-large {
-  font-size: 20px;
-  padding: 20px 32px 17px;
+  font-size: 18px;
+  padding: 18px 32px;
 }
 
 .btn-all-categories {
   margin-bottom: 16px;
   width: 100%;
+  background-color: #9c3;
 }
 
 .btn-category {
   width: 100%;
   background-image: none;
+  background-color: #ffc107;
 }
 
-/* FORM */
+/* Form styles */
 .fact-form {
-  background-color: #44403c;
+  background-color: #292524;
   margin-bottom: 40px;
-  padding: 16px 32px;
+  padding: 20px 32px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -186,7 +202,7 @@ ul {
   border: none;
   border-radius: 100px;
   padding: 16px;
-  font-size: 18px;
+  font-size: 16px;
   color: inherit;
   font-family: inherit;
 }
@@ -201,7 +217,7 @@ ul {
 
 .fact-form span {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   margin-right: 18px;
 }
 
@@ -219,4 +235,24 @@ ul {
   .fact-form select {
     width: auto;
   }
+}
+
+/* Footer styles */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+footer:hover {
+  background-color: #292929;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
 }
